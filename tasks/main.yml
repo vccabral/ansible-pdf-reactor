@@ -1,0 +1,16 @@
+---
+- name: Download PDFReactor
+  get_url: 
+    url: "{{ PDF_REACTOR_URL }}/{{ PDF_REACTOR_FILE }}"
+    dest: "{{ PDF_REACTOR_INSTALL_DIR }}/{{ PDF_REACTOR_FILE }}"
+    force: false
+
+- name: Untar PDFReactor
+  unarchive: 
+    src: "{{ PDF_REACTOR_INSTALL_DIR }}/{{ PDF_REACTOR_FILE }}"
+    dest: "{{ PDF_REACTOR_INSTALL_DIR }}" 
+    copy: no
+    creates: "{{ PDF_REACTOR_INSTALL_DIR }}/.pdfreactor_untarred"
+
+- name: Start PDFReactor service
+  command: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor/bin/pdfreactorwebservice start "
