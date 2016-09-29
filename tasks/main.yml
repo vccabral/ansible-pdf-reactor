@@ -10,7 +10,7 @@
     src: "{{ PDF_REACTOR_INSTALL_DIR }}/{{ PDF_REACTOR_FILE }}"
     dest: "{{ PDF_REACTOR_INSTALL_DIR }}" 
     copy: no
-    creates: "{{ PDF_REACTOR_INSTALL_DIR }}/.pdfreactor_untarred"
+    creates: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor"
 
 - name: Start PDFReactor service
   command: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor/bin/pdfreactorwebservice start "
