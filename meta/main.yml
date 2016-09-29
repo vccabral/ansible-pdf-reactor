@@ -1,19 +1,15 @@
 ---
 galaxy_info:
-  author: Victor Cabral
-  description: Installs and runs PDF Reactor.
-  company: Excella Consulting
+  author: Victor Cabral 
+  description: An ansible role to PDF Reactor
+  company: Excella Consulting 
   license: MIT
   min_ansible_version: 1.2
-
   platforms:
   - name: EL
-   versions:
-   - all
-   - 5
-   - 6
-   - 7
-  galaxy_tags: []
+    versions:
+      - 7
   categories:
     - system
 dependencies: []
+  
