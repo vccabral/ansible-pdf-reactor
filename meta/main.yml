@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Victor Cabral
   description: Installs and runs PDF Reactor.
@@ -13,4 +14,6 @@ galaxy_info:
    - 6
    - 7
   galaxy_tags: []
+  categories:
+    - system
 dependencies: []
