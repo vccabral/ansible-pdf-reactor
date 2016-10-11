@@ -3,7 +3,7 @@
   get_url: 
     url: "{{ PDF_REACTOR_URL }}/{{ PDF_REACTOR_FILE }}"
     dest: "{{ PDF_REACTOR_INSTALL_DIR }}/{{ PDF_REACTOR_FILE }}"
-    timeout: 6000
+    timeout: 60
     use_proxy: true
     force: false
 
