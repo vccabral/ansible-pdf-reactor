@@ -14,5 +14,13 @@
     copy: no
     creates: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor"
 
-- name: Start PDFReactor service
-  command: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor/bin/pdfreactorwebservice start "
+- name: Create pdfreactorwebservice symlink
+  file:
+    src: "{{ PDF_REACTOR_INSTALL_DIR }}/PDFreactor/bin/pdfreactorwebservice"
+    dest: "/etc/init.d/pdfreactorwebservice"
+    owner: root
+    group: root
+    state: link
+
+- name: Start and enable pdfreactor
+  service: name=pdfreactorwebservice state=started enabled=yes
